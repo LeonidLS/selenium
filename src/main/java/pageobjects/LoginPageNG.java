@@ -1,8 +1,7 @@
-package com.eisgroup;
+package pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.Test;
 
 
 public class LoginPageNG extends BasePageNG {
@@ -16,15 +15,8 @@ public class LoginPageNG extends BasePageNG {
     @FindBy(xpath = ".//*[@id='loginForm:submitForm']")
     public WebElement loginBtn;
 
-    @Test(priority = 1)
-    public void initLoginFeilds() {
 
-        loginField.sendKeys("qa");
-        pswdField.sendKeys("qa");
-        loginBtn.click();
+    // method for loginToApp(Users user){
+    // will use user.getLogin() and user.getPassword()}
 
-        super.selectCustTab();
-
-        driver.getCurrentUrl();
-    }
 }
